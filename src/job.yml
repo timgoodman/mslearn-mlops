@@ -12,4 +12,4 @@ inputs:
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: testdiabetes-vm
 experiment_name: exp1
-description: 
+description: ...
