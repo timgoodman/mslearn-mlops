@@ -10,6 +10,10 @@ inputs:
     path: ../experimentation/data
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+# For provisioned compute, create a VM in the Azure ML Workspace (Azure ML Studio > [[your workspace]] > Manage > Compute)
+# and then specify it here:
+
+# To use serverless compute, just 
 # compute: 
 experiment_name: exp1
 description: ...
