@@ -10,10 +10,20 @@ inputs:
     path: ../experimentation/data
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+
 # For provisioned compute, create a VM in the Azure ML Workspace (Azure ML Studio > [[your workspace]] > Manage > Compute)
 # and then specify it here:
+# compute:  testdiabetes-vm
 
-# To use serverless compute, just 
-# compute: 
+# Another option is serverless compute: https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-serverless-compute
+# To use serverless compute, just remove "compute:" from this file. Don't need to manage VM's in ML Studio.
+# Optionally, can specify resources and queue_settings as shown below.
+# (Can check recommended VM sizes and availability by starting to create new Comput in ML Studio, and then just canceling.)
+resources:
+  instance_count: 1
+  instance_type: Standard_DS11_v2
+queue_settings:
+   job_tier: Spot  # Possible Values are Standard (dedicated), Spot (low priority). Default is Standard.
+
 experiment_name: exp1
 description: ...
