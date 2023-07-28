@@ -1,4 +1,4 @@
-$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+[$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: model
 command: >-
   python train.py
@@ -10,6 +10,6 @@ inputs:
     path: ../experimentation/data
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: 
-experiment_name: 
+compute: testdiabetes-vm
+experiment_name: exp1
 description: 
