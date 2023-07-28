@@ -25,5 +25,6 @@ resources:
 queue_settings:
    job_tier: Spot  # Possible Values are Standard (dedicated), Spot (low priority). Default is Standard.
 
-experiment_name: exp1
+display_name: test_job
+experiment_name: experiment_1
 description: ...
